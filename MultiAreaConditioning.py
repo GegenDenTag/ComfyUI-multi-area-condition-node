@@ -1,5 +1,5 @@
 # 02/04/2023 Made by Davemane42#0042 for ComfyUI 
-# 09/09/2024 Fix gdt
+# 2024-11-09 Fix gdt
 
 import torch
 from nodes import MAX_RESOLUTION # 16384 == 2^14 Why... 😁
