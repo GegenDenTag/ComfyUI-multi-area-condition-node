@@ -1,0 +1,14 @@
+[project]
+name = "ComfyUI_multi-area-condition-node"
+description = ""
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/GegenDenTag/ComfyUI-multi-area-condition-node"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "gdt"
+DisplayName = "Multi Area Conditioning"
+Icon = ""
