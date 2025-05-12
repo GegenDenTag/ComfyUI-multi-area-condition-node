@@ -1,6 +1,6 @@
 [project]
 name = "ComfyUI_multi-area-condition-node"
-description = ""
+description = "Fix Nov. 2024, Davemane42's Custom Node for ComfyUI"
 version = "1.0.0"
 license = "LICENSE"
 
