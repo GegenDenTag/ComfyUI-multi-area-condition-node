@@ -5,6 +5,9 @@ the repository created by him was archived on April 2, 2024.
 I experimented with various (newer, sometimes better) available alternatives but didn’t achieve the same results with older generations. Therefore, I adapted the custom node to prevent ComfyUI from freezing. Additionally, I removed the routines for automatic installation of the JavaScript files and instead registered the node in the ComfyUI Manager.
 Thus, with the current version of ComfyUI, it is no longer necessary to perform an automatic installation in 'YourPath\ComfyUI_windows_portable\ComfyUI\web\extensions'.
 
+https://github.com/comfyanonymous/ComfyUI/issues/5425#issuecomment-2448600231 
+and
+https://github.com/comfyanonymous/ComfyUI/issues/5425#issuecomment-2452987079
 
 ## Installation
 
