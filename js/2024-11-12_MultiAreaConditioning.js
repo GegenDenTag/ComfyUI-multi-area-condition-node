@@ -86,7 +86,6 @@ function addMultiAreaConditioningCanvas(node, app) {
 				}
 
 				return [x, y, w, h]
-				
 			}
             
 			// Draw all the conditioning zones
@@ -212,18 +211,16 @@ app.registerExtension({
 				this.setProperty("values", [[0, 0, 0, 0, 1.0], [0, 0, 0, 0, 1.0]])
 
 				this.selected = false
-				// Index wird nach dem Hinzufügen aller Widgets gesetzt, 2025-06-12
-				// this.index = 3
+				this.index = 3
+
                 this.serialize_widgets = true;
 
-				// Resolution
 				CUSTOM_INT(this, "resolutionX", 1024, function (v, _, node) {const s = this.options.step / 10; this.value = Math.round(v / s) * s; node.properties["width"] = this.value})
 				CUSTOM_INT(this, "resolutionY", 1024, function (v, _, node) {const s = this.options.step / 10; this.value = Math.round(v / s) * s; node.properties["height"] = this.value})
                 
-				// Canvas als Letztes hinzufügen, damit er nach den Eingabe-Widgets liegt, 2025-06-12
-				// addMultiAreaConditioningCanvas(this, app)
+				addMultiAreaConditioningCanvas(this, app)
 
-				/* CUSTOM_INT(
+				CUSTOM_INT(
 					this,
 					"index",
 					0,
@@ -240,47 +237,13 @@ app.registerExtension({
 					},
 					{ step: 10, max: 1 }
 
-				) */
-
-				// Index und alle anderen Eingabe-Widgets hinzufügen
-				const indexWidget = CUSTOM_INT(
-					this,
-					"index",
-					0,
-					function (v, _, node) {
-						let values = node.properties["values"]
-						// Berechnung der Widget-Indizes
-						const xWidgetIndex = node.indexWidget + 1
-						const yWidgetIndex = node.indexWidget + 2
-						const widthWidgetIndex = node.indexWidget + 3
-						const heightWidgetIndex = node.indexWidget + 4
-						const strengthWidgetIndex = node.indexWidget + 5
-
-						node.widgets[xWidgetIndex].value = values[v][0]
-						node.widgets[yWidgetIndex].value = values[v][1]
-						node.widgets[widthWidgetIndex].value = values[v][2]
-						node.widgets[heightWidgetIndex].value = values[v][3]
-						if (!values[v][4]) {values[v][4] = 1.0}
-						node.widgets[strengthWidgetIndex].value = values[v][4]
-					},
-					{ step: 10, max: 1 }
 				)
-				
-				// Speichere den Index des Index-Widgets für spätere Referenz
-				this.indexWidget = this.widgets.length - 1
 				
 				CUSTOM_INT(this, "x", 0, function (v, _, node) {transformFunc(this, v, node, 0)})
 				CUSTOM_INT(this, "y", 0, function (v, _, node) {transformFunc(this, v, node, 1)})
 				CUSTOM_INT(this, "width", 0, function (v, _, node) {transformFunc(this, v, node, 2)})
 				CUSTOM_INT(this, "height", 0, function (v, _, node) {transformFunc(this, v, node, 3)})
 				CUSTOM_INT(this, "strength", 1, function (v, _, node) {transformFunc(this, v, node, 4)}, {"min": 0.0, "max": 10.0, "step": 0.1, "precision": 2})
-
-				// Canvas als Letztes hinzufügen, damit er nach den Eingabe-Widgets liegt, 2025-06-12
-				addMultiAreaConditioningCanvas(this, app)
-				
-				// Index des index-Widgets
-				this.index = this.indexWidget				
-
 
 				this.getExtraMenuOptions = function(_, options) {
 					options.unshift(
