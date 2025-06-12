@@ -198,6 +198,7 @@ function addMultiAreaConditioningCanvas(node, app) {
 	return { minWidth: 200, minHeight: 200, widget }
 }
 
+// 2025-06-12 Add Canvas last so it appears after the input(control) widgets
 app.registerExtension({
 	name: "Comfy.gdt.MultiAreaConditioning",
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
