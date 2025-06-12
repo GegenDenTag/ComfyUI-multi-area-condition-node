@@ -2,7 +2,7 @@
 # 2024-11-09 Fix gdt
 # https://github.com/comfyanonymous/ComfyUI/issues/5425
 # 2025-06-12 MultiAreaConditioning.js 
-#       Add Canvas last so it appears after the input(control) widgets
+#      Add Canvas last so it appears after the input(control) widgets
 
 import torch
 from nodes import MAX_RESOLUTION # 16384 == 2^14 Why... 😁
