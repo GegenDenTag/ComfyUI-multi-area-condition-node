@@ -9,6 +9,10 @@ https://github.com/comfyanonymous/ComfyUI/issues/5425#issuecomment-2448600231
 and
 https://github.com/comfyanonymous/ComfyUI/issues/5425#issuecomment-2452987079
 
+2025-06-12 MultiAreaConditioning.js 
+    Add Canvas last so it appears after the input(control) widgets
+
+
 ## Installation
 
 ### Option 1: Install via ComfyUI Manager
