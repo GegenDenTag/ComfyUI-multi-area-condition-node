@@ -214,7 +214,7 @@ app.registerExtension({
 				this.selected = false
 				// Index wird nach dem Hinzufügen aller Widgets gesetzt, 2025-06-12
 				// this.index = 3
-                this.serialize_widgets = true;
+				this.serialize_widgets = true;
 
 				// Resolution
 				CUSTOM_INT(this, "resolutionX", 1024, function (v, _, node) {const s = this.options.step / 10; this.value = Math.round(v / s) * s; node.properties["width"] = this.value})
