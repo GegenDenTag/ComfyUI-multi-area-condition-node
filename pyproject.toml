@@ -1,7 +1,8 @@
 [project]
 name = "ComfyUI_multi-area-condition-node"
-description = "Fix Nov. 2024, Davemane42's Custom Node for ComfyUI"
-version = "1.0.0"
+description = "Fix Nov. 2024, Davemane42's Custom Node for ComfyUI, 
+Add Canvas last so it appears after the input(control) widgets"
+version = "1.0.1"
 license = "LICENSE"
 
 [project.urls]
